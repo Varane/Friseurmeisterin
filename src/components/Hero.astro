@@ -1,0 +1,40 @@
+---
+import { getSiteData, withBase } from '@lib/site';
+const site = getSiteData();
+const heroImage = '/images/hero/hero-scissors-in-hand.webp';
+---
+<section class="container-pad grid gap-10 py-16 lg:grid-cols-2 lg:items-center">
+  <div class="space-y-6">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-ink/50">München · Friseurmeisterin</p>
+    <h1 class="font-serif text-4xl font-semibold text-ink md:text-5xl">
+      {site.businessName}
+    </h1>
+    <p class="text-lg text-ink/70">{site.tagline}</p>
+    <div class="flex flex-wrap gap-4">
+      <a
+        class="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent/90 focus-ring"
+        href={site.bookingUrl || withBase('/#contact')}
+      >
+        {site.heroCtaLabel}
+      </a>
+      <a
+        class="rounded-full border border-ink/20 px-6 py-3 text-sm font-semibold text-ink transition hover:border-ink/40 focus-ring"
+        href={withBase('/shop')}
+      >
+        Zum Shop
+      </a>
+    </div>
+  </div>
+  <div class="relative">
+    <div class="absolute -left-6 top-6 h-full w-full rounded-3xl bg-blush"></div>
+    <img
+      src={withBase(heroImage)}
+      alt="PLACEHOLDER_HERO_IMAGE_ALT"
+      width="640"
+      height="720"
+      class="relative z-10 h-auto w-full rounded-3xl object-cover shadow-lg"
+      loading="eager"
+      decoding="async"
+    />
+  </div>
+</section>

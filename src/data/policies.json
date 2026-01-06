@@ -1,0 +1,9 @@
+{
+  "shipping": {
+    "scope": "Germany",
+    "text": "PLACEHOLDER_SHIPPING_TEXT"
+  },
+  "returns": {
+    "text": "PLACEHOLDER_RETURNS_TEXT"
+  }
+}

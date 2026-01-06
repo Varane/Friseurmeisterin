@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import Services from '@components/Services.astro';
+import Gallery from '@components/Gallery.astro';
+import FeaturedProducts from '@components/FeaturedProducts.astro';
+import Trust from '@components/Trust.astro';
+import Contact from '@components/Contact.astro';
+import { getSiteData } from '@lib/site';
+
+const site = getSiteData();
+---
+<BaseLayout title={site.businessName} description={site.tagline}>
+  <Hero />
+  <Services />
+  <Gallery />
+  <FeaturedProducts />
+  <Trust />
+  <Contact />
+</BaseLayout>
