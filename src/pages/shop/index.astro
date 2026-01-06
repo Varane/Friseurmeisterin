@@ -1,0 +1,93 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ProductCard from '@components/ProductCard.astro';
+import { getProducts, getProductCategories, sortProducts } from '@lib/products';
+import filtersScript from '@components/Filters.client.ts';
+
+const products = sortProducts(getProducts(), 'default');
+const categories = getProductCategories();
+const prices = products.map((product) => product.priceEur);
+const minPrice = prices.length ? Math.min(...prices) : 0;
+const maxPrice = prices.length ? Math.max(...prices) : 0;
+---
+<BaseLayout title="Shop" description="PLACEHOLDER_SHOP_DESCRIPTION">
+  <section class="container-pad py-12">
+    <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-ink/50">Shop</p>
+        <h1 class="font-serif text-4xl font-semibold text-ink">Produkte</h1>
+        <p class="mt-2 text-sm text-ink/70">PLACEHOLDER_SHOP_INTRO</p>
+      </div>
+      <div class="rounded-full bg-white px-4 py-2 text-sm text-ink/70">
+        <span data-result-count>{products.length}</span> Artikel
+      </div>
+    </div>
+
+    <form data-filter-form class="mt-8 grid gap-4 rounded-2xl bg-white p-6 shadow-sm md:grid-cols-4">
+      <label class="text-sm">
+        Kategorie
+        <select name="category" class="mt-2 w-full rounded-lg border border-ink/10 bg-white px-3 py-2 text-sm focus-ring">
+          <option value="">Alle</option>
+          {categories.map((category) => (
+            <option value={category} key={category}>{category}</option>
+          ))}
+        </select>
+      </label>
+      <label class="text-sm">
+        Preis min
+        <input
+          type="number"
+          name="minPrice"
+          min={minPrice}
+          max={maxPrice}
+          placeholder={`${minPrice}`}
+          class="mt-2 w-full rounded-lg border border-ink/10 bg-white px-3 py-2 text-sm focus-ring"
+        />
+      </label>
+      <label class="text-sm">
+        Preis max
+        <input
+          type="number"
+          name="maxPrice"
+          min={minPrice}
+          max={maxPrice}
+          placeholder={`${maxPrice}`}
+          class="mt-2 w-full rounded-lg border border-ink/10 bg-white px-3 py-2 text-sm focus-ring"
+        />
+      </label>
+      <label class="text-sm">
+        Suche
+        <input
+          type="search"
+          name="search"
+          placeholder="Produkt oder Marke"
+          class="mt-2 w-full rounded-lg border border-ink/10 bg-white px-3 py-2 text-sm focus-ring"
+        />
+      </label>
+      <label class="text-sm md:col-span-2">
+        Sortieren
+        <select name="sort" class="mt-2 w-full rounded-lg border border-ink/10 bg-white px-3 py-2 text-sm focus-ring">
+          <option value="default">Empfohlen</option>
+          <option value="price-asc">Preis aufsteigend</option>
+          <option value="price-desc">Preis absteigend</option>
+        </select>
+      </label>
+      <div class="flex items-end gap-3 md:col-span-2">
+        <button
+          type="button"
+          data-reset-filters
+          class="rounded-full border border-ink/20 px-4 py-2 text-sm font-semibold text-ink focus-ring"
+        >
+          Filter zurücksetzen
+        </button>
+      </div>
+    </form>
+
+    <div data-products-grid class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {products.map((product) => (
+        <ProductCard product={product} />
+      ))}
+    </div>
+  </section>
+  <script type="module" src={filtersScript}></script>
+</BaseLayout>
