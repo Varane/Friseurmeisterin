@@ -1,0 +1,90 @@
+[
+  {
+    "id": "prod-001",
+    "slug": "moisture-repair-shampoo",
+    "name": "Moisture Repair Shampoo",
+    "brand": "PLACEHOLDER_BRAND",
+    "category": "Pflege",
+    "priceEur": 24,
+    "currency": "EUR",
+    "featured": true,
+    "inStock": true,
+    "images": [
+      {
+        "src": "/images/products/glynt-derma-shampoo-tonic-revital-milk-set.webp",
+        "alt": "PLACEHOLDER_PRODUCT_IMAGE_ALT"
+      }
+    ],
+    "shortDescription": "PLACEHOLDER_SHORT_DESCRIPTION",
+    "description": "PLACEHOLDER_LONG_DESCRIPTION",
+    "usage": "PLACEHOLDER_USAGE",
+    "ingredients": "PLACEHOLDER_INGREDIENTS",
+    "paymentLinkUrl": "https://buy.stripe.com/PLACEHOLDER_SHAMPOO"
+  },
+  {
+    "id": "prod-002",
+    "slug": "glossing-conditioner",
+    "name": "Glossing Conditioner",
+    "brand": "PLACEHOLDER_BRAND",
+    "category": "Pflege",
+    "priceEur": 22,
+    "currency": "EUR",
+    "featured": true,
+    "inStock": true,
+    "images": [
+      {
+        "src": "/images/products/glynt-derma-regulate-tonic-04-and-revital-regain-milk-03.webp",
+        "alt": "PLACEHOLDER_PRODUCT_IMAGE_ALT"
+      }
+    ],
+    "shortDescription": "PLACEHOLDER_SHORT_DESCRIPTION",
+    "description": "PLACEHOLDER_LONG_DESCRIPTION",
+    "usage": "PLACEHOLDER_USAGE",
+    "ingredients": "PLACEHOLDER_INGREDIENTS",
+    "paymentLinkUrl": "https://buy.stripe.com/PLACEHOLDER_CONDITIONER"
+  },
+  {
+    "id": "prod-003",
+    "slug": "volume-spray",
+    "name": "Lightweight Volume Spray",
+    "brand": "PLACEHOLDER_BRAND",
+    "category": "Styling",
+    "priceEur": 18,
+    "currency": "EUR",
+    "featured": true,
+    "inStock": false,
+    "images": [
+      {
+        "src": "/images/products/glynt-range-derma-derma-tonic-revital-refresh-volume.webp",
+        "alt": "PLACEHOLDER_PRODUCT_IMAGE_ALT"
+      }
+    ],
+    "shortDescription": "PLACEHOLDER_SHORT_DESCRIPTION",
+    "description": "PLACEHOLDER_LONG_DESCRIPTION",
+    "usage": "PLACEHOLDER_USAGE",
+    "ingredients": "PLACEHOLDER_INGREDIENTS",
+    "paymentLinkUrl": ""
+  },
+  {
+    "id": "prod-004",
+    "slug": "heat-protect-mist",
+    "name": "Heat Protect Mist",
+    "brand": "PLACEHOLDER_BRAND",
+    "category": "Schutz",
+    "priceEur": 20,
+    "currency": "EUR",
+    "featured": false,
+    "inStock": true,
+    "images": [
+      {
+        "src": "/images/products/glynt-derma-regulate-tonic-04-and-revital-regain-milk-03-closeup.webp",
+        "alt": "PLACEHOLDER_PRODUCT_IMAGE_ALT"
+      }
+    ],
+    "shortDescription": "PLACEHOLDER_SHORT_DESCRIPTION",
+    "description": "PLACEHOLDER_LONG_DESCRIPTION",
+    "usage": "PLACEHOLDER_USAGE",
+    "ingredients": "PLACEHOLDER_INGREDIENTS",
+    "paymentLinkUrl": "https://buy.stripe.com/PLACEHOLDER_HEAT"
+  }
+]

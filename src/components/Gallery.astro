@@ -1,0 +1,50 @@
+---
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { withBase } from '@lib/site';
+
+const portfolioDir = new URL('../../public/images/portfolio', import.meta.url);
+let images: { src: string; alt: string }[] = [];
+try {
+  const files = await fs.readdir(portfolioDir, { withFileTypes: true });
+  images = files
+    .filter((file) => file.isFile())
+    .map((file) => file.name)
+    .filter((fileName) => /\.(png|jpe?g|webp|gif|svg)$/i.test(fileName))
+    .map((fileName) => ({
+      src: `/images/portfolio/${fileName}`,
+      alt: 'PLACEHOLDER_PORTFOLIO_ALT'
+    }));
+} catch {
+  images = [];
+}
+---
+<section id="portfolio" class="container-pad py-16">
+  <div class="flex items-center justify-between">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-ink/50">Portfolio</p>
+      <h2 class="font-serif text-3xl font-semibold text-ink md:text-4xl">Looks &amp; Inspiration</h2>
+    </div>
+  </div>
+  <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {images.length ? (
+      images.map((image) => (
+        <figure class="overflow-hidden rounded-2xl bg-white" key={image.src}>
+          <img
+            src={withBase(image.src)}
+            alt={image.alt}
+            width="480"
+            height="560"
+            class="aspect-[4/5] h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      ))
+    ) : (
+      <div class="col-span-full rounded-2xl border border-dashed border-line bg-white p-8 text-center text-sm text-ink/60">
+        PLACEHOLDER_PORTFOLIO_NOTE
+      </div>
+    )}
+  </div>
+</section>

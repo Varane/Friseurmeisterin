@@ -1,0 +1,21 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getSiteData } from '@lib/site';
+
+const site = getSiteData();
+---
+<BaseLayout title="Impressum" description="PLACEHOLDER_IMPRESSUM_DESCRIPTION">
+  <section class="container-pad py-12">
+    <h1 class="font-serif text-4xl font-semibold text-ink">Impressum</h1>
+    <div class="mt-6 space-y-4 text-sm text-ink/70">
+      <p>PLACEHOLDER_IMPRESSUM_TEXT</p>
+      <div class="rounded-2xl bg-white p-6 shadow-sm">
+        <p class="font-semibold">{site.businessName}</p>
+        <p>{site.contact.address}</p>
+        <p>{site.contact.phone}</p>
+        <p>{site.contact.email}</p>
+      </div>
+      <p>PLACEHOLDER_IMPRESSUM_NOTE</p>
+    </div>
+  </section>
+</BaseLayout>

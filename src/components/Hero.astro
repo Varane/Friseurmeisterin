@@ -1,0 +1,33 @@
+---
+import { getSiteData, withBase } from '@lib/site';
+const site = getSiteData();
+const heroImage = '/images/hero/hero-scissors-in-hand.webp';
+---
+<section class="container-pad grid gap-12 py-20 lg:grid-cols-2 lg:items-center">
+  <div class="space-y-6">
+    <p class="text-xs font-semibold uppercase tracking-[0.3em] text-ink/50">München · Friseurmeisterin</p>
+    <h1 class="font-serif text-4xl font-semibold text-ink md:text-5xl lg:text-6xl">
+      {site.businessName}
+    </h1>
+    <p class="text-base text-ink/70">{site.tagline}</p>
+    <div class="flex flex-wrap gap-4">
+      <a class="btn-primary" href={site.bookingUrl || withBase('/#contact')}>
+        {site.heroCtaLabel}
+      </a>
+      <a class="btn-secondary" href={withBase('/shop')}>
+        Zum Shop
+      </a>
+    </div>
+  </div>
+  <div class="relative">
+    <img
+      src={withBase(heroImage)}
+      alt="PLACEHOLDER_HERO_IMAGE_ALT"
+      width="640"
+      height="720"
+      class="relative z-10 h-auto w-full rounded-3xl object-cover"
+      loading="eager"
+      decoding="async"
+    />
+  </div>
+</section>

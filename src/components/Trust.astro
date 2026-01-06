@@ -1,0 +1,14 @@
+<section class="container-pad py-16">
+  <div>
+    <p class="text-xs font-semibold uppercase tracking-[0.3em] text-ink/50">Vertrauen</p>
+    <h2 class="font-serif text-3xl font-semibold text-ink md:text-4xl">Stimmen &amp; Vertrauen</h2>
+  </div>
+  <div class="mt-8 grid gap-6 md:grid-cols-3">
+    {['PLACEHOLDER_TESTIMONIAL', 'PLACEHOLDER_TESTIMONIAL', 'PLACEHOLDER_TESTIMONIAL'].map((text, index) => (
+      <article class="card p-6" key={index}>
+        <p class="text-sm text-ink/70">“{text}”</p>
+        <p class="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-ink/40">PLACEHOLDER_NAME</p>
+      </article>
+    ))}
+  </div>
+</section>
