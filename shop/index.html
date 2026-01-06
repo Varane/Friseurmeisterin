@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop – Ina Dalinger – Friseurmeisterin</title>
+    <meta name="description" content="PLACEHOLDER_SHOP_DESCRIPTION" />
+    <link rel="canonical" href="https://varane.github.io/Friseurmeisterin/shop/" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link focus-ring" href="#main">Zum Inhalt springen</a>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand focus-ring" href="../">Ina Dalinger – Friseurmeisterin</a>
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a class="focus-ring" href="../#services">Services</a>
+          <a class="focus-ring" href="../#portfolio">Portfolio</a>
+          <a class="focus-ring" href="./">Shop</a>
+          <a class="focus-ring" href="../#contact">Kontakt</a>
+        </nav>
+        <a class="btn btn-secondary focus-ring" href="../#contact">Termin anfragen</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:2rem;">
+            <div>
+              <p class="section-eyebrow">Shop</p>
+              <h1 class="section-title">Produkte</h1>
+              <p class="tagline">PLACEHOLDER_SHOP_INTRO</p>
+            </div>
+            <div class="badge"><span id="result-count">0</span> Artikel</div>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <button id="open-filters" class="btn btn-secondary focus-ring">Filter</button>
+          </div>
+
+          <dialog id="filter-dialog" class="dialog">
+            <form method="dialog" id="filter-form">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <p class="badge">Filter</p>
+                <button class="btn btn-secondary" value="cancel">Schließen</button>
+              </div>
+              <div style="display:grid; gap:1rem; margin-top:1rem;">
+                <div>
+                  <label for="category">Kategorie</label>
+                  <select id="category" name="category" class="input"></select>
+                </div>
+                <div>
+                  <label for="minPrice">Preis min</label>
+                  <input id="minPrice" name="minPrice" type="number" class="input" />
+                </div>
+                <div>
+                  <label for="maxPrice">Preis max</label>
+                  <input id="maxPrice" name="maxPrice" type="number" class="input" />
+                </div>
+                <div>
+                  <label for="search">Suche</label>
+                  <input id="search" name="search" type="search" class="input" placeholder="Produkt oder Marke" />
+                </div>
+                <div>
+                  <label for="sort">Sortieren</label>
+                  <select id="sort" name="sort" class="input">
+                    <option value="default">Empfohlen</option>
+                    <option value="price-asc">Preis aufsteigend</option>
+                    <option value="price-desc">Preis absteigend</option>
+                  </select>
+                </div>
+                <button id="reset-filters" class="btn btn-secondary" type="button">Filter zurücksetzen</button>
+              </div>
+            </form>
+          </dialog>
+
+          <div id="products" class="shop-grid" style="margin-top:2.5rem;"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="badge">Ina Dalinger – Friseurmeisterin</p>
+          <p class="prose" data-site="tagline">PLACEHOLDER_TAGLINE</p>
+        </div>
+        <div class="prose">
+          <p class="badge">Kontakt</p>
+          <p data-site="contact.address">PLACEHOLDER_ADDRESS</p>
+          <p data-site="contact.phone">PLACEHOLDER_PHONE</p>
+          <p data-site="contact.email">PLACEHOLDER_EMAIL</p>
+        </div>
+        <div class="prose">
+          <p class="badge">Rechtliches</p>
+          <a class="focus-ring" href="../impressum.html">Impressum</a><br />
+          <a class="focus-ring" href="../datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="container notice">© <span id="year"></span> Ina Dalinger – Friseurmeisterin. PLACEHOLDER_LEGAL_NOTE</div>
+    </footer>
+
+    <script src="shop.js" type="module"></script>
+  </body>
+</html>
