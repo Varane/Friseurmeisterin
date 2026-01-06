@@ -1,0 +1,3 @@
+Unzip and copy the 'public' folder into your website repo root.
+Images will be under public/images/{hero|portfolio|products}/...
+Use manifest.json for suggested alt text.

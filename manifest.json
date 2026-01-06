@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "category": "hero",
+      "path": "public/images/hero/hero-scissors-in-hand.webp",
+      "alt": "Hand holding hairdressing scissors in front of a mirror.",
+      "sha256_16": "ff1fec91dab845eb",
+      "source_file": "Screenshot 2026-01-06 121559.png"
+    },
+    {
+      "category": "portfolio",
+      "path": "public/images/portfolio/portfolio-blonde-length-finish-01.webp",
+      "alt": "Back view of finished blonde hair, straight and smooth.",
+      "sha256_16": "bccf5993bfa63fa7",
+      "source_file": "Screenshot 2026-01-06 121749.png"
+    },
+    {
+      "category": "portfolio",
+      "path": "public/images/portfolio/portfolio-before-after-cut-color-01.webp",
+      "alt": "Before-and-after collage showing hair color and cut transformation.",
+      "sha256_16": "593a62826a6f8931",
+      "source_file": "Screenshot 2026-01-06 121838.png"
+    },
+    {
+      "category": "products",
+      "path": "public/images/products/glynt-derma-regulate-tonic-04-and-revital-regain-milk-03.webp",
+      "alt": "GLYNT Derma Regulate Tonic 04 and Revital Regain Milk 03.",
+      "sha256_16": "84c2056b7a9083f0",
+      "source_file": "Screenshot 2026-01-06 121912.png"
+    },
+    {
+      "category": "products",
+      "path": "public/images/products/glynt-range-derma-derma-tonic-revital-refresh-volume.webp",
+      "alt": "GLYNT product range photo showing multiple items on display.",
+      "sha256_16": "c50b2e97feb13eec",
+      "source_file": "Screenshot 2026-01-06 121932.png"
+    },
+    {
+      "category": "products",
+      "path": "public/images/products/glynt-derma-regulate-tonic-04-and-revital-regain-milk-03-closeup.webp",
+      "alt": "Close-up of GLYNT Derma Regulate Tonic 04 and Revital Regain Milk 03.",
+      "sha256_16": "cbd8fe3f393a5c9e",
+      "source_file": "Screenshot 2026-01-06 121953.png"
+    },
+    {
+      "category": "products",
+      "path": "public/images/products/glynt-derma-shampoo-tonic-revital-milk-set.webp",
+      "alt": "GLYNT Derma Shampoo with Derma Tonic and Revital Milk on a pink background.",
+      "sha256_16": "4054def8f9dde73b",
+      "source_file": "Screenshot 2026-01-06 122008.png"
+    },
+    {
+      "category": "portfolio",
+      "path": "public/images/portfolio/portfolio-blonde-bob-cut-01.webp",
+      "alt": "Blonde bob haircut from different angles.",
+      "sha256_16": "30c7a87f3584aab8",
+      "source_file": "Screenshot 2026-01-06 122034.png"
+    },
+    {
+      "category": "portfolio",
+      "path": "public/images/portfolio/portfolio-before-after-blowdry-01.webp",
+      "alt": "Before-and-after comparison of hair finish.",
+      "sha256_16": "f496624a9f3fce97",
+      "source_file": "Screenshot 2026-01-06 122047.png"
+    },
+    {
+      "category": "portfolio",
+      "path": "public/images/portfolio/portfolio-before-after-curls-01.webp",
+      "alt": "Before-and-after comparison of curly hair styling.",
+      "sha256_16": "d2017ddec65a104a",
+      "source_file": "Screenshot 2026-01-06 122101.png"
+    }
+  ]
+}
