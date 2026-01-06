@@ -2,7 +2,6 @@ const form = document.querySelector<HTMLFormElement>('[data-filter-form]');
 const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-product-card]'));
 const resultCount = document.querySelector<HTMLElement>('[data-result-count]');
 const resetButton = document.querySelector<HTMLButtonElement>('[data-reset-filters]');
-const drawer = document.querySelector<HTMLDetailsElement>('[data-filter-drawer]');
 
 const update = () => {
   if (!form) return;
@@ -55,12 +54,3 @@ resetButton?.addEventListener('click', () => {
 });
 
 update();
-
-if (drawer) {
-  const mediaQuery = window.matchMedia('(min-width: 768px)');
-  const syncDrawer = () => {
-    drawer.open = mediaQuery.matches;
-  };
-  mediaQuery.addEventListener('change', syncDrawer);
-  syncDrawer();
-}

@@ -14,11 +14,6 @@ npm run dev
 1. Go to **Settings → Pages**.
 2. Set **Source** to **GitHub Actions**.
 3. Push to `main` and the workflow in `.github/workflows/deploy.yml` will build and deploy.
-4. The published URL should be `https://varane.github.io/Friseurmeisterin/`.
-
-### Proxy note (CI installs)
-
-This project uses only public npm packages. If your CI environment enforces an HTTP proxy, configure a real proxy URL via GitHub Secrets and inject it in the workflow; otherwise, proxy defaults like `http://proxy:8080` will break `npm install`.
 
 ## Content editing (Decap CMS)
 

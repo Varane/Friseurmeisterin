@@ -28,14 +28,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical.toString()} />
     <meta property="og:image" content={new URL(withBase('/images/hero/hero-scissors-in-hand.webp'), Astro.site).toString()} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
   </head>
-  <body class="font-sans">
+  <body>
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <Header />
     <main id="main">

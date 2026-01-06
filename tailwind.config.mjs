@@ -3,11 +3,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#111111',
-        sand: '#FFFFFF',
-        mist: '#F7F7F8',
-        line: '#E5E7EB',
-        accent: '#0ABAB5'
+        ink: '#1B1B1F',
+        sand: '#F6F2ED',
+        blush: '#E8D7CF',
+        accent: '#8E5C4A'
       },
       fontFamily: {
         sans: ['"Inter"', 'system-ui', 'sans-serif'],

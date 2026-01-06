@@ -2,29 +2,29 @@
 import { getSiteData, withBase } from '@lib/site';
 const site = getSiteData();
 ---
-<footer class="border-t border-line bg-white">
-  <div class="container-pad grid gap-8 py-12 md:grid-cols-3">
+<footer class="border-t border-black/5 bg-white">
+  <div class="container-pad grid gap-8 py-10 md:grid-cols-3">
     <div class="space-y-3">
-      <p class="text-sm font-semibold uppercase tracking-[0.2em]">{site.businessName}</p>
-      <p class="text-sm text-ink/60">{site.tagline}</p>
-      <a class="inline-flex text-xs font-semibold uppercase tracking-[0.2em] text-accent focus-ring" href={site.socials.instagramUrl}>
+      <p class="text-lg font-semibold">{site.businessName}</p>
+      <p class="text-sm text-ink/70">{site.tagline}</p>
+      <a class="inline-flex text-sm font-medium text-accent focus-ring" href={site.socials.instagramUrl}>
         Instagram
       </a>
     </div>
     <div class="space-y-2 text-sm">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em]">Kontakt</p>
+      <p class="font-semibold">Kontakt</p>
       <p>{site.contact.address}</p>
       <p>{site.contact.phone}</p>
       <p>{site.contact.email}</p>
     </div>
     <div class="space-y-2 text-sm">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em]">Rechtliches</p>
-      <a class="block text-ink/70 transition hover:text-ink focus-ring" href={withBase('/impressum')}>Impressum</a>
-      <a class="block text-ink/70 transition hover:text-ink focus-ring" href={withBase('/datenschutz')}>Datenschutz</a>
-      <a class="block text-ink/70 transition hover:text-ink focus-ring" href={site.contact.mapsUrl}>Google Maps</a>
+      <p class="font-semibold">Rechtliches</p>
+      <a class="block focus-ring" href={withBase('/impressum')}>Impressum</a>
+      <a class="block focus-ring" href={withBase('/datenschutz')}>Datenschutz</a>
+      <a class="block focus-ring" href={site.contact.mapsUrl}>Google Maps</a>
     </div>
   </div>
-  <div class="border-t border-line py-4 text-center text-xs text-ink/60">
+  <div class="border-t border-black/5 py-4 text-center text-xs text-ink/60">
     <p>© {new Date().getFullYear()} {site.businessName}. PLACEHOLDER_LEGAL_NOTE</p>
   </div>
 </footer>

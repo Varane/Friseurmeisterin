@@ -3,24 +3,24 @@ import { getSiteData, withBase } from '@lib/site';
 const site = getSiteData();
 const base = import.meta.env.BASE_URL;
 ---
-<header class="sticky top-0 z-40 border-b border-line bg-sand/95 backdrop-blur">
+<header class="sticky top-0 z-40 border-b border-black/5 bg-sand/90 backdrop-blur">
   <div class="container-pad flex items-center justify-between py-4">
-    <a href={withBase('/')} class="text-base font-semibold tracking-[0.2em] uppercase focus-ring">
+    <a href={withBase('/')} class="text-lg font-semibold tracking-tight focus-ring">
       {site.businessName}
     </a>
-    <nav aria-label="Hauptnavigation" class="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.2em] md:flex">
-      <a class="text-ink/70 transition hover:text-ink focus-ring" href={withBase('/#services')}>Services</a>
-      <a class="text-ink/70 transition hover:text-ink focus-ring" href={withBase('/#portfolio')}>Portfolio</a>
-      <a class="text-ink/70 transition hover:text-ink focus-ring" href={withBase('/shop')}>Shop</a>
-      <a class="text-ink/70 transition hover:text-ink focus-ring" href={withBase('/#contact')}>Kontakt</a>
+    <nav aria-label="Hauptnavigation" class="hidden items-center gap-6 text-sm font-medium md:flex">
+      <a class="focus-ring" href={withBase('/#services')}>Services</a>
+      <a class="focus-ring" href={withBase('/#portfolio')}>Portfolio</a>
+      <a class="focus-ring" href={withBase('/shop')}>Shop</a>
+      <a class="focus-ring" href={withBase('/#contact')}>Kontakt</a>
     </nav>
     <a
       href={site.bookingUrl || withBase('/#contact')}
-      class="hidden rounded-full border border-ink px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink transition hover:bg-ink hover:text-white focus-ring md:inline-flex"
+      class="hidden rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-ink/90 focus-ring md:inline-flex"
     >
       {site.heroCtaLabel}
     </a>
-    <a class="text-xs font-semibold uppercase tracking-[0.2em] md:hidden focus-ring" href={withBase('/shop')} aria-label="Zum Shop">
+    <a class="md:hidden focus-ring" href={withBase('/shop')} aria-label="Zum Shop">
       Shop
     </a>
   </div>
